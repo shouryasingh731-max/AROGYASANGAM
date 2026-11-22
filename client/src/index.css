@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import 'leaflet/dist/leaflet.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-navy antialiased font-sans;
+    margin: 0;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-navy tracking-tight font-semibold;
+  }
+}
+
+@layer components {
+  /* Buttons */
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-4 py-2.5 bg-gradient-to-r from-primary to-primary-600 text-white text-sm font-semibold rounded-xl shadow-md shadow-primary/25 hover:shadow-lg hover:shadow-primary/35 hover:from-primary-600 hover:to-primary-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none active:scale-[0.98];
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-4 py-2.5 bg-white text-primary border border-primary/30 text-sm font-semibold rounded-xl hover:bg-primary-50/70 hover:border-primary/50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none active:scale-[0.98];
+  }
+
+  .btn-teal {
+    @apply inline-flex items-center justify-center px-4 py-2.5 bg-gradient-to-r from-secondary to-secondary-dark text-white text-sm font-semibold rounded-xl shadow-md shadow-secondary/25 hover:shadow-lg hover:shadow-secondary/35 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none active:scale-[0.98];
+  }
+
+  .btn-danger {
+    @apply inline-flex items-center justify-center px-4 py-2.5 bg-gradient-to-r from-danger to-danger-700 text-white text-sm font-semibold rounded-xl shadow-md shadow-danger/25 hover:shadow-lg hover:shadow-danger/35 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-danger focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none active:scale-[0.98];
+  }
+
+  .btn-success {
+    @apply inline-flex items-center justify-center px-4 py-2.5 bg-gradient-to-r from-success to-success-700 text-white text-sm font-semibold rounded-xl shadow-md shadow-success/25 hover:shadow-lg hover:shadow-success/35 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-success focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none active:scale-[0.98];
+  }
+
+  /* Cards */
+  .card {
+    @apply bg-white rounded-2xl border border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(15,23,42,0.05)] p-5 transition-all;
+  }
+
+  .card-glass {
+    @apply bg-white/80 backdrop-blur-xl rounded-2xl border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] p-6;
+  }
+
+  .card-interactive {
+    @apply bg-white rounded-2xl border border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(15,23,42,0.05)] p-5 hover:border-primary/40 hover:shadow-[0_12px_32px_-4px_rgba(37,99,235,0.12)] hover:-translate-y-0.5 transition-all duration-200;
+  }
+
+  /* Badges */
+  .badge-verified {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-50 text-emerald-700 border border-emerald-200 shadow-sm shadow-emerald-500/5;
+  }
+
+  .badge-pending {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-amber-50 text-amber-700 border border-amber-200 shadow-sm shadow-amber-500/5;
+  }
+
+  /* Inputs */
+  .input-field {
+    @apply w-full rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm text-navy placeholder-slate-400 transition-all focus:border-primary focus:bg-white focus:outline-none focus:ring-4 focus:ring-primary/10 shadow-sm;
+  }
+
+  .select-field {
+    @apply w-full rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm text-navy transition-all focus:border-primary focus:bg-white focus:outline-none focus:ring-4 focus:ring-primary/10 shadow-sm;
+  }
+}
+
+/* Background Grids */
+.bg-grid-pattern {
+  background-image: radial-gradient(rgba(37, 99, 235, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.bg-dot-pattern {
+  background-image: radial-gradient(rgba(100, 116, 139, 0.12) 1.5px, transparent 1.5px);
+  background-size: 20px 20px;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Leaflet marker & map styling */
+.custom-leaflet-marker {
+  background: transparent !important;
+  border: none !important;
+}
+
+.leaflet-container {
+  font-family: inherit;
+  z-index: 10;
+}
+

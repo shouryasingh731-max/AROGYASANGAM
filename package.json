@@ -1,0 +1,13 @@
+{
+  "name": "arogyasangam",
+  "version": "1.0.0",
+  "description": "AROGYASANGAM - Smart Hospital Referral & Resource Finder",
+  "scripts": {
+    "build": "npm run build --prefix client",
+    "server": "cd server && npm run dev",
+    "server:start": "cd server && npm start",
+    "client": "cd client && npm run dev",
+    "client:build": "cd client && npm run build",
+    "seed": "cd server && npm run seed"
+  }
+}
